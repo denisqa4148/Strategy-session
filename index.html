@@ -276,6 +276,55 @@
     .slide[data-stage="2"] .presentation-bottom{gap:8px;}
   }
 
+
+  /* Stage 10: working TOP-3 pilot cards */
+  .stage10-work{height:100%;display:grid;grid-template-rows:auto auto 1fr;gap:12px;min-height:0}
+  .stage10-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
+  .stage10-intro{max-width:980px}
+  .stage10-tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+  .s10-tab{border:1px solid var(--line);background:#fff;color:var(--ink);font:inherit;font-weight:850;border-radius:999px;padding:9px 14px;cursor:pointer;transition:.2s ease;box-shadow:0 6px 18px rgba(25,42,70,.06)}
+  .s10-tab:hover{transform:translateY(-1px)}
+  .s10-tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+  .s10-progress{height:7px;background:#e5edf3;border-radius:99px;overflow:hidden}
+  .s10-progress i{display:block;height:100%;width:25%;background:linear-gradient(90deg,var(--teal),#72d9d2);border-radius:99px;transition:width .35s ease}
+  .s10-page{display:none;min-height:0;overflow:hidden}
+  .s10-page.active{display:grid;animation:s10Enter .42s cubic-bezier(.2,.82,.2,1) both}
+  @keyframes s10Enter{from{opacity:0;transform:translateY(10px) scale(.995)}to{opacity:1;transform:none}}
+  .pilot-layout{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:16px;min-height:0}
+  .pilot-card{min-height:0;background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px 20px;box-shadow:0 12px 34px rgba(28,45,72,.07);overflow:auto}
+  .pilot-card.accent{background:linear-gradient(135deg,rgba(25,184,173,.09),rgba(25,184,173,.025));border-color:rgba(25,184,173,.24)}
+  .pilot-label{font-size:12px;letter-spacing:.11em;text-transform:uppercase;color:var(--teal2);font-weight:900;margin:0 0 6px}
+  .pilot-title-input{width:100%;border:0;border-bottom:2px solid rgba(25,184,173,.28);background:transparent;padding:4px 0 9px;font:inherit;font-weight:900;font-size:clamp(22px,1.65vw,31px);color:var(--ink);outline:none}
+  .pilot-title-input:focus{border-color:var(--teal)}
+  .pilot-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px 13px;margin-top:14px}
+  .field{background:#f8fbfd;border:1px solid #e1e9f1;border-radius:15px;padding:11px 12px;min-height:96px}
+  .field.full{grid-column:1/-1}
+  .field .n{display:inline-flex;width:25px;height:25px;border-radius:8px;align-items:center;justify-content:center;background:#e6f7f5;color:var(--teal2);font-size:12px;font-weight:900;margin-right:7px}
+  .field label{font-size:14px;font-weight:900;display:flex;align-items:center;margin-bottom:5px}
+  .field small{display:block;color:var(--muted);font-size:12px;font-weight:700;margin-bottom:6px}
+  .field textarea,.field input{width:100%;border:0;background:transparent;resize:none;outline:none;font:inherit;color:var(--ink);font-size:15px;line-height:1.25;padding:0;min-height:35px}
+  .pilot-side{display:flex;flex-direction:column;gap:12px;min-height:0}
+  .pilot-side .card{padding:16px 18px}
+  .pilot-side h2{margin:0 0 8px;font-size:clamp(18px,1.25vw,24px)}
+  .pilot-side p,.pilot-side li{font-size:clamp(14px,.95vw,18px);line-height:1.28}
+  .mini-rule{display:flex;gap:9px;align-items:flex-start;margin:7px 0}
+  .mini-rule b{display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:24px;border-radius:8px;background:#fff;border:1px solid var(--line);font-size:11px;color:var(--teal2)}
+  .s10-summary{grid-template-rows:auto 1fr auto;gap:14px;min-height:0}
+  .summary-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;min-height:0}
+  .summary-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px 17px;box-shadow:0 10px 28px rgba(28,45,72,.06);overflow:auto}
+  .summary-rank{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal2);font-weight:900}
+  .summary-name{font-size:clamp(19px,1.35vw,25px);font-weight:900;line-height:1.12;margin:7px 0 12px}
+  .summary-row{margin:8px 0}
+  .summary-row b{display:block;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+  .summary-row span{font-size:14px;line-height:1.25;white-space:pre-wrap}
+  .summary-actions{display:flex;justify-content:center;gap:10px;align-items:center}
+  .action-btn{appearance:none;border:0;border-radius:13px;padding:10px 16px;font:inherit;font-weight:850;cursor:pointer;transition:.2s ease}
+  .action-btn.primary{background:var(--navy);color:#fff}
+  .action-btn.secondary{background:#fff;color:var(--ink);border:1px solid var(--line)}
+  .action-btn:hover{transform:translateY(-1px)}
+  .save-state{font-size:12px;color:var(--muted);font-weight:750;margin-left:4px}
+  @media(max-height:820px){.pilot-card{padding:13px 15px}.pilot-grid{gap:8px 10px;margin-top:9px}.field{min-height:78px;padding:8px 10px}.field textarea,.field input{font-size:14px}.stage10-work{gap:8px}.stage10-head h1{font-size:clamp(24px,2vw,34px)}}
+
 </style>
 
 <!-- GitHub Pages build: EasyRetro iframe is intended to be opened over HTTPS, not file://. -->
@@ -772,20 +821,95 @@ body:before{animation:floatBg 16s ease-in-out infinite alternate !important;will
 
     <section class="slide" data-stage="10">
       <div class="slide-number">10</div>
-      <div class="content dense">
-        <h1 class="reveal" style="--d:.03s">ЭТАП 10: ТОП-3. От идеи к пилоту</h1>
-        <p class="lead reveal" style="--d:.09s">Для каждой выбранной инициативы фиксируем минимум необходимой информации.</p>
-        <div class="grid2 reveal" style="--d:.16s">
-          <div class="card teal">
-            <p><b>1. Для кого?</b><br>Какая аудитория?</p>
-            <p><b>2. Что делаем?</b><br>Короткая механика.</p>
-            <p><b>3. Почему человек придет?</b><br>Главная причина визита.</p>
-            <p><b>4. Как он узнает?</b><br>Канал коммуникации.</p>
+      <div class="content stage10-work">
+        <div class="stage10-head">
+          <div class="stage10-intro">
+            <h1>ЭТАП 10: ТОП-3. От идеи к пилоту</h1>
+            <p class="lead" style="margin:4px 0 0">Для каждой выбранной инициативы фиксируем минимум необходимой информации.</p>
           </div>
-          <div class="card yellow">
-            <p><b>5. Где тестируем?</b><br>Магазин / группа магазинов.</p>
-            <p><b>6. Как измеряем?</b><br>Основной KPI — изменение трафика.</p>
-            <p><b>7. Кто отвечает?</b><br>Ответственный и следующий шаг.</p>
+          <div class="stage10-tabs" id="s10Tabs">
+            <button class="s10-tab active" data-s10="0">Инициатива 1</button>
+            <button class="s10-tab" data-s10="1">Инициатива 2</button>
+            <button class="s10-tab" data-s10="2">Инициатива 3</button>
+            <button class="s10-tab" data-s10="3">Итог</button>
+          </div>
+        </div>
+        <div class="s10-progress"><i id="s10Progress"></i></div>
+        <div class="s10-page active pilot-layout" data-s10-page="0"><div class="pilot-card accent">
+            <div class="pilot-label">ТОП-1 · Название инициативы</div>
+            <input class="pilot-title-input s10-input" data-i="0" data-field="name" placeholder="Введите название идеи-победителя из EasyRetro" />
+            <div class="pilot-grid">
+              <div class="field"><label><span class="n">1</span>Для кого?</label><small>Какая аудитория?</small><textarea class="s10-input" data-i="0" data-field="audience" rows="2" placeholder="Аудитория"></textarea></div>
+              <div class="field"><label><span class="n">2</span>Что делаем?</label><small>Короткая механика.</small><textarea class="s10-input" data-i="0" data-field="mechanic" rows="2" placeholder="Механика"></textarea></div>
+              <div class="field"><label><span class="n">3</span>Почему человек придет?</label><small>Главная причина визита.</small><textarea class="s10-input" data-i="0" data-field="reason" rows="2" placeholder="Причина визита"></textarea></div>
+              <div class="field"><label><span class="n">4</span>Как он узнает?</label><small>Канал коммуникации.</small><textarea class="s10-input" data-i="0" data-field="channel" rows="2" placeholder="Канал коммуникации"></textarea></div>
+              <div class="field"><label><span class="n">5</span>Где тестируем?</label><small>Магазин / группа магазинов.</small><textarea class="s10-input" data-i="0" data-field="test" rows="2" placeholder="Где запускаем пилот"></textarea></div>
+              <div class="field"><label><span class="n">6</span>Как измеряем?</label><small>Основной KPI — изменение трафика.</small><textarea class="s10-input" data-i="0" data-field="measure" rows="2" placeholder="Как проверяем эффект"></textarea></div>
+              <div class="field full"><label><span class="n">7</span>Кто отвечает?</label><small>Ответственный и следующий шаг.</small><input class="s10-input" data-i="0" data-field="owner" placeholder="Ответственный · следующий шаг" /></div>
+            </div>
+          </div>
+          <div class="pilot-side">
+            <div class="card teal"><h2>Что сейчас делаем</h2><p>Берем одну из трех идей-победителей после голосования и вместе переводим ее в конкретный пилот.</p></div>
+            <div class="card yellow"><h2>Критерий готовности</h2>
+              <div class="mini-rule"><b>01</b><span>Понятно, для какого покупателя запускаем.</span></div>
+              <div class="mini-rule"><b>02</b><span>Понятно, почему это даст физический визит.</span></div>
+              <div class="mini-rule"><b>03</b><span>Есть место теста и способ измерить трафик.</span></div>
+              <div class="mini-rule"><b>04</b><span>Есть ответственный и следующий шаг.</span></div>
+            </div>
+            <div class="card soft"><p style="margin:0"><b>Автосохранение:</b> все введенное остается в браузере даже после обновления страницы.</p></div>
+          </div></div>
+        <div class="s10-page pilot-layout" data-s10-page="1"><div class="pilot-card accent">
+            <div class="pilot-label">ТОП-2 · Название инициативы</div>
+            <input class="pilot-title-input s10-input" data-i="1" data-field="name" placeholder="Введите название идеи-победителя из EasyRetro" />
+            <div class="pilot-grid">
+              <div class="field"><label><span class="n">1</span>Для кого?</label><small>Какая аудитория?</small><textarea class="s10-input" data-i="1" data-field="audience" rows="2" placeholder="Аудитория"></textarea></div>
+              <div class="field"><label><span class="n">2</span>Что делаем?</label><small>Короткая механика.</small><textarea class="s10-input" data-i="1" data-field="mechanic" rows="2" placeholder="Механика"></textarea></div>
+              <div class="field"><label><span class="n">3</span>Почему человек придет?</label><small>Главная причина визита.</small><textarea class="s10-input" data-i="1" data-field="reason" rows="2" placeholder="Причина визита"></textarea></div>
+              <div class="field"><label><span class="n">4</span>Как он узнает?</label><small>Канал коммуникации.</small><textarea class="s10-input" data-i="1" data-field="channel" rows="2" placeholder="Канал коммуникации"></textarea></div>
+              <div class="field"><label><span class="n">5</span>Где тестируем?</label><small>Магазин / группа магазинов.</small><textarea class="s10-input" data-i="1" data-field="test" rows="2" placeholder="Где запускаем пилот"></textarea></div>
+              <div class="field"><label><span class="n">6</span>Как измеряем?</label><small>Основной KPI — изменение трафика.</small><textarea class="s10-input" data-i="1" data-field="measure" rows="2" placeholder="Как проверяем эффект"></textarea></div>
+              <div class="field full"><label><span class="n">7</span>Кто отвечает?</label><small>Ответственный и следующий шаг.</small><input class="s10-input" data-i="1" data-field="owner" placeholder="Ответственный · следующий шаг" /></div>
+            </div>
+          </div>
+          <div class="pilot-side">
+            <div class="card teal"><h2>Что сейчас делаем</h2><p>Берем одну из трех идей-победителей после голосования и вместе переводим ее в конкретный пилот.</p></div>
+            <div class="card yellow"><h2>Критерий готовности</h2>
+              <div class="mini-rule"><b>01</b><span>Понятно, для какого покупателя запускаем.</span></div>
+              <div class="mini-rule"><b>02</b><span>Понятно, почему это даст физический визит.</span></div>
+              <div class="mini-rule"><b>03</b><span>Есть место теста и способ измерить трафик.</span></div>
+              <div class="mini-rule"><b>04</b><span>Есть ответственный и следующий шаг.</span></div>
+            </div>
+            <div class="card soft"><p style="margin:0"><b>Автосохранение:</b> все введенное остается в браузере даже после обновления страницы.</p></div>
+          </div></div>
+        <div class="s10-page pilot-layout" data-s10-page="2"><div class="pilot-card accent">
+            <div class="pilot-label">ТОП-3 · Название инициативы</div>
+            <input class="pilot-title-input s10-input" data-i="2" data-field="name" placeholder="Введите название идеи-победителя из EasyRetro" />
+            <div class="pilot-grid">
+              <div class="field"><label><span class="n">1</span>Для кого?</label><small>Какая аудитория?</small><textarea class="s10-input" data-i="2" data-field="audience" rows="2" placeholder="Аудитория"></textarea></div>
+              <div class="field"><label><span class="n">2</span>Что делаем?</label><small>Короткая механика.</small><textarea class="s10-input" data-i="2" data-field="mechanic" rows="2" placeholder="Механика"></textarea></div>
+              <div class="field"><label><span class="n">3</span>Почему человек придет?</label><small>Главная причина визита.</small><textarea class="s10-input" data-i="2" data-field="reason" rows="2" placeholder="Причина визита"></textarea></div>
+              <div class="field"><label><span class="n">4</span>Как он узнает?</label><small>Канал коммуникации.</small><textarea class="s10-input" data-i="2" data-field="channel" rows="2" placeholder="Канал коммуникации"></textarea></div>
+              <div class="field"><label><span class="n">5</span>Где тестируем?</label><small>Магазин / группа магазинов.</small><textarea class="s10-input" data-i="2" data-field="test" rows="2" placeholder="Где запускаем пилот"></textarea></div>
+              <div class="field"><label><span class="n">6</span>Как измеряем?</label><small>Основной KPI — изменение трафика.</small><textarea class="s10-input" data-i="2" data-field="measure" rows="2" placeholder="Как проверяем эффект"></textarea></div>
+              <div class="field full"><label><span class="n">7</span>Кто отвечает?</label><small>Ответственный и следующий шаг.</small><input class="s10-input" data-i="2" data-field="owner" placeholder="Ответственный · следующий шаг" /></div>
+            </div>
+          </div>
+          <div class="pilot-side">
+            <div class="card teal"><h2>Что сейчас делаем</h2><p>Берем одну из трех идей-победителей после голосования и вместе переводим ее в конкретный пилот.</p></div>
+            <div class="card yellow"><h2>Критерий готовности</h2>
+              <div class="mini-rule"><b>01</b><span>Понятно, для какого покупателя запускаем.</span></div>
+              <div class="mini-rule"><b>02</b><span>Понятно, почему это даст физический визит.</span></div>
+              <div class="mini-rule"><b>03</b><span>Есть место теста и способ измерить трафик.</span></div>
+              <div class="mini-rule"><b>04</b><span>Есть ответственный и следующий шаг.</span></div>
+            </div>
+            <div class="card soft"><p style="margin:0"><b>Автосохранение:</b> все введенное остается в браузере даже после обновления страницы.</p></div>
+          </div></div>
+        <div class="s10-page s10-summary" data-s10-page="3">
+          <div class="card green" style="padding:13px 16px"><b>ИТОГ СЕССИИ</b> · Три инициативы, которые переводим из идеи в пилот. <span class="save-state" id="saveState">Данные сохраняются автоматически на этом компьютере.</span></div>
+          <div class="summary-cards" id="summaryCards"></div>
+          <div class="summary-actions">
+            <button class="action-btn secondary" id="copySummary">Скопировать итоги</button>
+            <button class="action-btn primary" id="downloadSummary">Скачать итоги .txt</button>
           </div>
         </div>
       </div>
@@ -809,10 +933,17 @@ body:before{animation:floatBg 16s ease-in-out infinite alternate !important;will
   let idx=0;
   let presIdx=0;
   const presSlides=[...document.querySelectorAll('.pres-slide')];
+  let s10Idx=0;
+  const s10Pages=[...document.querySelectorAll('[data-s10-page]')];
+  const s10Tabs=[...document.querySelectorAll('.s10-tab')];
+  const s10Progress=document.getElementById('s10Progress');
+  const S10_KEY='strategy_session_top3_v1';
+  const S10_FIELDS=['name','audience','mechanic','reason','channel','test','measure','owner'];
+  let s10Data=[0,1,2].map(()=>Object.fromEntries(S10_FIELDS.map(f=>[f,''])));
 
 
   function fitSlideContent(slide){
-    if(!slide || slide.dataset.stage==='2' || slide.dataset.board==='true') return;
+    if(!slide || slide.dataset.stage==='2' || slide.dataset.stage==='10' || slide.dataset.board==='true') return;
     const content=slide.querySelector('.content');
     if(!content) return;
 
@@ -859,6 +990,10 @@ body:before{animation:floatBg 16s ease-in-out infinite alternate !important;will
     prevBtn.style.opacity=(idx===0)?.35:1;
     if(stage===2 && presIdx < presSlides.length-1){
       nextBtn.textContent=`Слайд ${presIdx+2} / ${presSlides.length} →`;
+    } else if(stage===10 && s10Idx<3){
+      nextBtn.textContent=(s10Idx<2)?`К инициативе ${s10Idx+2} →`:'Показать итог →';
+    } else if(stage===10 && s10Idx===3){
+      nextBtn.textContent='Итоги готовы';
     } else if(idx===slides.length-1){
       nextBtn.textContent='Завершить';
     } else if(isBoard && stage<10){
@@ -909,6 +1044,8 @@ body:before{animation:floatBg 16s ease-in-out infinite alternate !important;will
     if(stage===2){
       if(presIdx<presSlides.length-1) setPresentation(presIdx+1,1);
       else if(idx<slides.length-1) go(idx+1);
+    } else if(stage===10){
+      if(s10Idx<3) setS10(s10Idx+1);
     } else if(idx<slides.length-1) go(idx+1);
   }
   function backward(){
@@ -916,8 +1053,55 @@ body:before{animation:floatBg 16s ease-in-out infinite alternate !important;will
     if(stage===2){
       if(presIdx>0) setPresentation(presIdx-1,-1);
       else if(idx>0) go(idx-1);
+    } else if(stage===10 && s10Idx>0){
+      setS10(s10Idx-1);
     } else if(idx>0) go(idx-1);
   }
+
+  function loadS10(){
+    try{
+      const saved=JSON.parse(localStorage.getItem(S10_KEY)||'null');
+      if(Array.isArray(saved) && saved.length===3) s10Data=saved;
+    }catch(e){}
+    document.querySelectorAll('.s10-input').forEach(el=>{
+      const i=Number(el.dataset.i), f=el.dataset.field;
+      el.value=(s10Data[i]&&s10Data[i][f])||'';
+      el.addEventListener('input',()=>{
+        s10Data[i][f]=el.value;
+        localStorage.setItem(S10_KEY,JSON.stringify(s10Data));
+        renderS10Summary();
+      });
+    });
+    renderS10Summary();
+  }
+  function setS10(next){
+    if(next<0||next>3) return;
+    s10Idx=next;
+    s10Pages.forEach((p,i)=>p.classList.toggle('active',i===next));
+    s10Tabs.forEach((t,i)=>t.classList.toggle('active',i===next));
+    if(s10Progress) s10Progress.style.width=((next+1)/4*100)+'%';
+    if(next===3) renderS10Summary();
+    updateFooter();
+  }
+  function esc(s){return String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+  function renderS10Summary(){
+    const wrap=document.getElementById('summaryCards'); if(!wrap) return;
+    const labels=[['audience','Для кого?'],['mechanic','Что делаем?'],['reason','Почему придет?'],['channel','Как узнает?'],['test','Где тестируем?'],['measure','Как измеряем?'],['owner','Кто отвечает?']];
+    wrap.innerHTML=s10Data.map((d,i)=>`<div class="summary-card"><div class="summary-rank">ТОП-${i+1}</div><div class="summary-name">${esc(d.name)||'Название инициативы'}</div>${labels.map(([f,l])=>`<div class="summary-row"><b>${l}</b><span>${esc(d[f])||'—'}</span></div>`).join('')}</div>`).join('');
+  }
+  function summaryText(){
+    const labels=[['audience','1. Для кого?'],['mechanic','2. Что делаем?'],['reason','3. Почему человек придет?'],['channel','4. Как он узнает?'],['test','5. Где тестируем?'],['measure','6. Как измеряем?'],['owner','7. Кто отвечает?']];
+    return 'СТРАТЕГИЧЕСКАЯ СЕССИЯ · ТРИ ЦЕНЫ\nТОП-3 · ОТ ИДЕИ К ПИЛОТУ\n\n'+s10Data.map((d,i)=>`ТОП-${i+1}: ${d.name||'Без названия'}\n${labels.map(([f,l])=>`${l} ${d[f]||'—'}`).join('\n')}`).join('\n\n------------------------------\n\n');
+  }
+  s10Tabs.forEach((t,i)=>t.addEventListener('click',()=>setS10(i)));
+  document.getElementById('downloadSummary')?.addEventListener('click',()=>{
+    const blob=new Blob([summaryText()],{type:'text/plain;charset=utf-8'});
+    const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='strategy-session-top3.txt';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+  });
+  document.getElementById('copySummary')?.addEventListener('click',async()=>{
+    try{await navigator.clipboard.writeText(summaryText());const b=document.getElementById('copySummary');b.textContent='Скопировано ✓';setTimeout(()=>b.textContent='Скопировать итоги',1500)}catch(e){}
+  });
+  loadS10();
 
   document.getElementById('presPrev').onclick=(e)=>{e.stopPropagation(); if(presIdx>0)setPresentation(presIdx-1,-1); else if(idx>0)go(idx-1)};
   document.getElementById('presNext').onclick=(e)=>{e.stopPropagation(); if(presIdx<presSlides.length-1)setPresentation(presIdx+1,1); else if(idx<slides.length-1)go(idx+1)};
